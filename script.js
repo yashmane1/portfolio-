@@ -60,3 +60,25 @@ window.addEventListener('scroll', () => {
 
   profilePic.style.opacity = opacity.toFixed(2);
 });
+
+document.getElementById("contactForm").addEventListener("submit", async function (e) {
+  e.preventDefault();
+
+  const form = e.target;
+  const formData = new FormData(form);
+  
+  const response = await fetch("https://formspree.io/f/myzjrala", {
+    method: "POST",
+    body: formData,
+    headers: {
+      Accept: "application/json",
+    },
+  });
+
+  if (response.ok) {
+    alert("✅ Your message has been sent!");
+    form.reset();
+  } else {
+    alert("❌ There was a problem. Please try again.");
+  }
+});
