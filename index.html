@@ -4,13 +4,21 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Yash Maruti Mane - Portfolio</title>
+
+  <!-- External CSS -->
   <link href="styles.css" rel="stylesheet"/>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet"/>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
+
+  <!-- JavaScript file -->
   <script defer src="script.js"></script>
 </head>
 <body>
 
-  <!-- Normal hero -->
+  <!-- Hero Section (Top section with introduction and buttons) -->
   <header class="hero">
     <div class="hero-content">
       <img src="images/profile.jpg" alt="Yash Maruti Mane" class="profile-pic" />
@@ -25,7 +33,7 @@
     </div>
   </header>
 
-  <!-- Sticky navigation below header -->
+  <!-- Sticky Navigation Bar -->
   <nav class="main-nav">
     <ul>
       <li><a href="#about">About</a></li>
@@ -40,11 +48,13 @@
 
   <!-- Main Content -->
   <main>
+    <!-- About Section -->
     <section id="about" class="container fade-in card">
       <h2>About Me</h2>
       <p>I am a dedicated IT graduate with hands-on experience in Python development and data analysis. I love building reliable software solutions and continuously learning new technologies.</p>
     </section>
 
+    <!-- Experience Section -->
     <section id="experience" class="container fade-in card">
       <h2>Experience</h2>
       <ul class="timeline">
@@ -64,6 +74,7 @@
       </ul>
     </section>
 
+    <!-- Education Section -->
     <section id="education" class="container fade-in card">
       <h2>Education</h2>
       <ul class="timeline">
@@ -82,6 +93,7 @@
       </ul>
     </section>
 
+    <!-- Projects Section -->
     <section id="projects" class="container fade-in">
       <h2>Projects</h2>
       <div class="projects-grid">
@@ -100,6 +112,7 @@
       </div>
     </section>
 
+    <!-- Skills Section -->
     <section id="skills" class="container fade-in card">
       <h2>Technical Skills</h2>
       <ul class="skills-list">
@@ -117,6 +130,7 @@
       </ul>
     </section>
 
+    <!-- Certifications Section -->
     <section id="certifications" class="container fade-in card">
       <h2>Certifications</h2>
       <ul class="certifications-list">
@@ -130,22 +144,36 @@
       </ul>
     </section>
 
+    <!-- Contact Section -->
     <section id="contact" class="container fade-in card contact-card">
       <div class="contact-grid">
+        <!-- Contact Info -->
         <div class="contact-info">
           <h2>Contact</h2>
           <p class="contact-subtitle">I'd like to hear from you!</p>
           <p>If you have any inquiries or just want to say hi,<br>please use the contact form.</p>
 
-          <p><strong>Email:</strong> <a href="mailto:yashmane500@gmail.com">yashmane500@gmail.com</a></p>
-          <p><strong>Phone:</strong> <a href="tel:+919892057739">+91 9892057739</a></p>
+          <p class="contact-row">
+            <img src="images/envelope.svg" alt="Email" class="social-icon" />
+            <a href="mailto:yashmane500@gmail.com">yashmane500@gmail.com</a>
+          </p>
+
+          <p class="contact-row">
+            <img src="images/phone.svg" alt="Phone" class="social-icon" />
+            <a href="tel:+919892057739">+91 9892057739</a>
+          </p>
 
           <div class="social-icons">
-            <a href="https://www.linkedin.com/in/yash-mane-49187a272/" target="_blank">LinkedIn</a>
-            <a href="https://github.com/yashmane1" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/yash-mane-49187a272/" target="_blank">
+              <img src="images/linkedin.svg" alt="LinkedIn" class="social-icon" />
+            </a>
+            <a href="https://github.com/yashmane1" target="_blank">
+              <img src="images/github.svg" alt="GitHub" class="social-icon" />
+            </a>
           </div>
         </div>
 
+        <!-- Contact Form -->
         <form id="contactForm" class="contact-form">
           <div class="form-row">
             <input type="text" name="first_name" placeholder="First Name" required>
@@ -154,25 +182,26 @@
           <input type="email" name="email" placeholder="Email *" required>
           <textarea name="message" placeholder="Message" required></textarea>
 
-  <!-- Honeypot to prevent spam -->
+          <!-- Honeypot to prevent spam -->
           <input type="text" name="_gotcha" style="display:none">
 
-  <!-- Optional: redirect after submission -->
-  <!-- <input type="hidden" name="_redirect" value="https://yourwebsite.com/thankyou.html"> -->
+          <!-- Optional redirect after submission -->
+          <!-- <input type="hidden" name="_redirect" value="https://yourwebsite.com/thankyou.html"> -->
 
           <button type="submit">Send</button>
         </form>
       </div>
     </section>
-
   </main>
 
-  <!-- Scroll to top button -->
-  <button id="scrollTopBtn">↑</button>
+  <!-- Scroll to Top Button -->
+  <button id="scrollTopBtn" aria-label="Scroll to top">
+  <i class="fas fa-arrow-up"></i>
+  </button>
 
   <!-- Footer -->
   <footer>
-    <div class="container">
+    <div class="footer-container">
       <p>&copy; 2025 Yash Maruti Mane</p>
     </div>
   </footer>
